@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hero-video-wrap">
+    <iframe
+      class="hero-video-iframe"
+      src="https://www.youtube.com/embed/9EOGkzDDqjA?autoplay=1&mute=1&controls=0&loop=1&playlist=9EOGkzDDqjA&playsinline=1&rel=0&disablekb=1&fs=0&modestbranding=1"
+      title="Фоновое видео"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <div class="hero-video-overlay" aria-hidden="true"></div>
+  </div>
+
+  <main class="page">
+    <div class="banner-wrap">
+      <img class="center-gif" src="assets/1407.gif" alt="Welcome Bonus">
+    </div>
+
+    <div class="form-card">
+      <div class="form-tabs">
+        <button type="button" class="form-tab form-tab--active" data-tab="email" aria-pressed="true">
+          <span class="form-tab-icon">@</span>
+          Email
+        </button>
+        <!-- <button type="button" class="form-tab" data-tab="phone" aria-pressed="false">
+          <span class="form-tab-icon">📱</span>
+          Phone number
+        </button> -->
+      </div>
+
+      <form class="reg-form" id="regForm">
+        <div class="input-wrap input-wrap--email">
+          <span class="input-icon">@</span>
+          <input type="email" class="form-input" placeholder="Email address" required>
+        </div>
+        <div class="input-wrap input-wrap--password">
+          <span class="input-icon">🔑</span>
+          <input type="password" class="form-input" placeholder="Password" id="passwordInput" required>
+          <button type="button" class="input-toggle-password" id="togglePassword" aria-label="Show password">
+            <span class="eye-icon">👁</span>
+          </button>
+        </div>
+        <div class="input-wrap input-wrap--currency">
+          <span class="input-icon">€</span>
+          <select class="form-input form-select">
+            <option>€ EUR | Euro</option>
+            <option>$ USD | US Dollar</option>
+            <option>£ GBP | British Pound</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">
+          <span class="btn-submit-icon">👤</span>
+          Fast Registration
+        </button>
+        <label class="form-check">
+          <input type="checkbox" class="form-checkbox" required>
+          <span class="form-check-text">
+            I am 18 years old. I accept
+            <a href="#" class="form-link">Privacy Policy</a>
+            and
+            <a href="#" class="form-link">Terms and Conditions</a>.
+          </span>
+        </label>
+        <a href="#" class="form-signin">
+          <span class="form-signin-icon">👤</span>
+          Sign In
+        </a>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
