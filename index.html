@@ -18,18 +18,6 @@
     <div class="hero-video-overlay" aria-hidden="true"></div>
   </div>
 
-  <section class="wheel-section" aria-label="Колесо фортуны">
-    <div class="wheel-container">
-      <div class="wheel-inner" id="wheelInner">
-        <img src="assets/well2.png" alt="Колесо" class="wheel-disk">
-      </div>
-      <button type="button" class="wheel-spin-btn" id="wheelSpinBtn" aria-label="Крутить">
-        <img src="assets/2-кнопка спин.png" alt="SPIN">
-      </button>
-      <img src="assets/r.png" alt="" class="wheel-frame" aria-hidden="true">
-    </div>
-  </section>
-
   <main class="page">
     <div class="banner-wrap">
       <img class="center-gif" src="assets/1407.gif" alt="Welcome Bonus">
@@ -50,7 +38,8 @@
       <form class="reg-form" id="regForm">
         <div class="input-wrap input-wrap--email">
           <span class="input-icon">@</span>
-          <input type="email" class="form-input" placeholder="Email address" required>
+          <input type="email" class="form-input" id="reg-email" placeholder="Email address" required>
+          <div class="form-error" id="reg-email-error"></div>
         </div>
         <div class="input-wrap input-wrap--password">
           <span class="input-icon">🔑</span>
@@ -58,21 +47,22 @@
           <button type="button" class="input-toggle-password" id="togglePassword" aria-label="Show password">
             <span class="eye-icon">👁</span>
           </button>
+          <div class="form-error" id="reg-password-error"></div>
         </div>
         <div class="input-wrap input-wrap--currency">
           <span class="input-icon">€</span>
-          <select class="form-input form-select">
-            <option>€ EUR | Euro</option>
-            <option>$ USD | US Dollar</option>
-            <option>£ GBP | British Pound</option>
+          <select class="form-input form-select" id="reg-currency">
+            <option value="EUR">€ EUR | Euro</option>
+            <option value="USD">$ USD | US Dollar</option>
+            <option value="GBP">£ GBP | British Pound</option>
           </select>
         </div>
-        <button type="submit" class="btn-submit">
+        <button type="submit" class="btn-submit" id="registration-submit-btn">
           <span class="btn-submit-icon">👤</span>
           Fast Registration
         </button>
         <label class="form-check">
-          <input type="checkbox" class="form-checkbox" required>
+          <input type="checkbox" class="form-checkbox" id="reg-terms" required>
           <span class="form-check-text">
             I am 18 years old. I accept
             <a href="#" class="form-link">Privacy Policy</a>
@@ -80,6 +70,8 @@
             <a href="#" class="form-link">Terms and Conditions</a>.
           </span>
         </label>
+        <div class="form-error" id="reg-terms-error"></div>
+        <div class="form-error" id="registration-submit-error"></div>
         <a href="#" class="form-signin">
           <span class="form-signin-icon">👤</span>
           Sign In
@@ -88,6 +80,7 @@
     </div>
   </main>
 
+  <script src="dist/registration.bundle.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
